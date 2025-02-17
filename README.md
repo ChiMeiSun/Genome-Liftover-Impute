@@ -179,6 +179,8 @@ wget -P Data/Assembly/ https://ftp.ensembl.org/pub/release-106/fasta/gallus_gall
 gzip -d Data/Assembly/*.fa.gz
 wget -P Data/Assembly/ https://42basepairs.com/download/web/ensembl/release-92/fasta/gallus_gallus/dna/Gallus_gallus.Gallus_gallus-5.0.dna.chromosome.{16,25,30}.fa.gz
 gzip -d Data/Assembly/*.fa.gz
+cat Data/Assembly/Gallus_gallus.Gallus_gallus-5.0.dna.chromosome.{16,25,30}.fa > Data/Assembly/Gallus_gallus.Gallus_gallus-5.0.dna.chromosome.162530.fa
+cat Data/Assembly/Gallus_gallus.GRCg6a.dna_rm.chromosome.{16,25,30}.fa > Data/Assembly/Gallus_gallus.GRCg6a.dna_rm.chromosome.162530.fa
 ```
 
 ### 2. Download and Prepare Data for Liftover
