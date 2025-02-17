@@ -1,0 +1,47 @@
+Assembly:
+  old: "Data/Assembly/Gallus_gallus.Gallus_gallus-5.0.dna.chromosome.162530.fa" # Assembly liftover from, in fasta 
+  new: "Data/Assembly/Gallus_gallus.GRCg6a.dna_rm.chromosome.162530.fa" # Assembly liftover to, in fasta 
+
+Data:
+  liftgt: "Data/Liftgt_20k_rename.vcf.gz" # Your genotyped data to be liftovered format in bcf/bcf.gz/vcf/vcf.gz
+  ref: "Data/Reference.vcf.gz" # Reference set for imputation, format in bcf/bcf.gz/vcf/vcf.gz
+  target: "Data/Target.vcf.gz" # Target set to be imputed, format in bcf/bcf.gz/vcf/vcf.gz
+
+# for Output, provide only the prefix
+# e.g. output will be "path/to/xxx.chain", but input only "path/to/xxx"
+Output:
+  chain: "Output/Chain/gg5Chr162530_to_GRCg6aChr162530" # .Chain 
+  genolift: "Output/Liftover/Liftgt_20k_lift" # .vcf.gz Data after Liftover
+  genorej: "Output/Liftover/Liftgt_20k_lift_rej" # .vcf.gz Rejected variants after liftover
+  ref_phase: "Output/Phase/Reference_phase" # .vcf.gz Phased reference set
+  target_phase: "Output/Phase/Target_phase" # .vcf.gz Phased target set
+  target_impute: "Output/Impute/Target_phase_impute" # .vcf.gz Imputed target set
+
+
+Impacc:
+  dir: "ImputationAccuracy" # directory for the output
+  # output will be named dir/CV_rep{rep}_fold{fold}, both figures(pdf) and table(txt)
+  rep: [1, 2] # list of repetition values
+  fold: [2,3] # list of fold values
+
+
+
+
+Packages:
+  parallel: "Packages/parallel-latest.tar.bz2"
+  bcftools: "Packages/bcftools-1.20.tar.bz2"
+  beagle: "Packages/beagle.22Jul22.46e.jar"
+  cfgt: "Packages/conform-gt.24May16.cee.jar"
+  bref: "Packages/bref3.27May24.118.jar"
+  cv: "Packages/crossVal_imputation.r"
+
+Resources:
+  threads: 20 # Number of threads availabe as resource
+  time: 2880 # Maximum time allowed for each rule to run (minutes)
+  mem: 100000 # Memory space for other rules (megabytes (MB))
+  chainmem: 1000000 # Memory space for making chain file, shoule be larger (MB)
+
+Params:
+  fasplitsize: 10000000 # make chain: fasta split size
+  mincount: 1 # beagle phase: minimum count of the contig
+  impute: "true" # beagle impute: "true" -> impute ungenotyped markers in the target data from the reference set, otherwise -> "false"
