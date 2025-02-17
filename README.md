@@ -18,7 +18,7 @@ Navigate to the folder as your working directory:
 
 ```sh
 git clone https://github.com/ChiMeiSun/Genome-Liftover-Impute.git
-cd path/to/Genome-Liftover-Impute
+cd Genome-Liftover-Impute
 ```
 
 Create and activate the conda environment:
