@@ -42,17 +42,17 @@ conda activate env_name
 snakemake -np
 ```
 
+#### Run the entire workflow (rule all):
+
+```sh
+snakemake --cores 20
+```
+
 #### Run a specific rule or output file (e.g. you allow 20 cores):
 
 ```sh
 snakemake --cores 20 rule_name
 snakemake --cores 20 output_file_name
-```
-
-#### Run the entire workflow (rule all):
-
-```sh
-snakemake --cores 20
 ```
 
 #### Re-run or re-generate an output:
