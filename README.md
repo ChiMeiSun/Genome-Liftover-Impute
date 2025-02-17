@@ -18,10 +18,15 @@ This workflow is implemented with Snakemake 5.3.0
 
 ### 1. Setup
 
-Navigate to the folder as your working directory:
+Download the project with git:
 
 ```sh
 git clone https://github.com/ChiMeiSun/Genome-Liftover-Impute.git
+```
+
+Navigate to the folder as your working directory:
+
+```sh
 cd Genome-Liftover-Impute
 ```
 
