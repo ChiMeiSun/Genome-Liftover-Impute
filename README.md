@@ -18,7 +18,7 @@ This workflow is implemented with Snakemake 5.3.0
 
 ### 1. Setup
 
-Download the project with git:
+Download the project with `git`:
 
 ```sh
 git clone https://github.com/ChiMeiSun/Genome-Liftover-Impute.git
