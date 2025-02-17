@@ -27,9 +27,9 @@ mamba env create -n env_name -f environment.yaml
 conda activate env_name
 ```
 
-Modify `config.yaml` to configure resources, file paths, and names.
+### 2. Modify `config.yaml` to configure resources, file paths, and names.
 
-### 2. Running Snakemake
+### 3. Running Snakemake
 
 #### Dry-run (check shell commands before execution):
 
