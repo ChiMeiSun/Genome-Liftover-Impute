@@ -2,13 +2,17 @@
 
 ## Overview
 
-This Snakemake workflow facilitates:
+This workflow facilitates:
 
 1. **Creation of chain file** – for genome assembly liftover
 2. **Liftover** – conversion of genetic data from one genome build to another
 3. **Phasing** – preparation of haplotype data
 4. **Imputation** – filling in missing genotypes using reference data
 5. **Cross-validation** – assessment of imputation accuracy
+
+This workflow is implemented with Snakemake 5.3.0
+[![Snakemake](https://img.shields.io/badge/snakemake-≥5.3.0-brightgreen.svg?style=flat)](https://snakemake.readthedocs.io)
+
 
 ## Workflow Instructions
 
@@ -50,6 +54,12 @@ snakemake --cores 20 output_file_name
 ```sh
 snakemake --cores 20
 ```
+
+#### Re-run or re-generate an output:
+
+Snakemake will re-run a rule if any of its input files have been updated or modified. If no input file changes have occurred but you still want to force a rule to be re-run, you can use the --force` flag.
+
+Note that many outputs in this workflow are protected (i.e., read-only or not meant to be overwritten). If you need to regenerate these files despite no updates to the inputs, you must remove the existing protected files first. Once deleted, Snakemake will recognize the missing outputs and re-run the corresponding rules to regenerate them.
 
 ---
 
