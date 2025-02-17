@@ -161,7 +161,10 @@ Impacc:
 
 ---
 
-## Sample Data Preparation
+
+
+
+### Sample Data Preparation (Provided in folder Data)
 
 A Fast Example of Chicken 20k SNPs on chr 16,25,30 aligned to Gallus_gallus-5.0
 
