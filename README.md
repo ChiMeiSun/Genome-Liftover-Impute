@@ -102,7 +102,6 @@ snakemake --cores 20 "Output/Liftover/Liftgt_20k_lift.vcf.gz"
 #### **Important Notes:**
 
 - Reference and target sets must be aligned to the same genome build (e.g., GRCg6a).
-- Reference panel must be phased and non-missing.
 - Multiallelic variants are removed.
 
   If you want to keep them, go to `Snakefile` and remove ``` bcftools-1.20/bcftools view -M2 -m2 | ``` in rule `beagle_phase_ref` and rule `beagle_phase_gt`
