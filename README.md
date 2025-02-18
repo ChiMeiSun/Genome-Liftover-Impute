@@ -13,6 +13,8 @@ This workflow facilitates:
 This workflow is implemented with Snakemake 5.3.0
 [![Snakemake](https://img.shields.io/badge/snakemake-≥5.3.0-brightgreen.svg?style=flat)](https://snakemake.readthedocs.io)
 
+The code for the creation of chain file was modified from 
+https://genomewiki.ucsc.edu/index.php/LiftOver_Howto
 
 ## Workflow Instructions
 
