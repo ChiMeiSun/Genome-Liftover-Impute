@@ -17,7 +17,7 @@ The code for the creation of chain file was modified from
 https://genomewiki.ucsc.edu/index.php/LiftOver_Howto
 
 To cite this workflow:
-https://doi.org/10.5281/zenodo.15343279
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15343279.svg)](https://doi.org/10.5281/zenodo.15343279)
 
 ## Workflow Instructions
 
