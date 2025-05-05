@@ -16,6 +16,9 @@ This workflow is implemented with Snakemake 5.3.0
 The code for the creation of chain file was modified from 
 https://genomewiki.ucsc.edu/index.php/LiftOver_Howto
 
+To cite this workflow:
+https://doi.org/10.5281/zenodo.15343279
+
 ## Workflow Instructions
 
 ### 1. Setup
