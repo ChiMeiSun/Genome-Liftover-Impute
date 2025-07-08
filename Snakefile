@@ -224,9 +224,10 @@ rule beagle_phase_gt:
             bcftools-1.20/bcftools norm -d all | \
             bcftools-1.20/bcftools annotate --set-id '%CHROM\:%POS\:%REF\:%ALT' \
             -Oz -o tmp_qc.vcf.gz --threads {threads}
-
+            
+            plink --vcf tmp_qc.vcf.gz --chr-set 40 --allow-extra-chr --mind 0.15 --geno 0.15 --maf 0.01 --recode vcf-iid --out gt
             java -Xmx$(( {resources.mem_mb} / 1000 - 2 ))g -XX:ConcGCThreads={threads} -jar {input.jar} \
-            gt=tmp_qc.vcf.gz out={params.phased}
+            gt=gt.vcf out={params.phased}
 
             bcftools-1.20/bcftools index -f {output.phased}
         ) &> {log} || true
