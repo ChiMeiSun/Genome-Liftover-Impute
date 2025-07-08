@@ -1,4 +1,3 @@
-name: Chain_Liftover
 channels:
   - bioconda
   - r
